@@ -1,0 +1,100 @@
+.navmenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.navmenu li {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.navmenu li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px; /* height of links */
+  padding: 0 10px;
+  position: relative;
+  overflow: hidden;
+  color: black;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 8px solid rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  /* 18 * 0.0555 = 1px */
+  letter-spacing: 0.0555em;
+  background: #ff7473; /* default background color */
+  text-decoration: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; /* center text horizontally */
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; /* center text vertically */
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 35px;
+  font-family: 'Nanum Brush Script', cursive;
+}
+
+/* Create shimmering effect */
+.navmenu li a:after {
+  content: '';
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  background: white;
+  opacity: 0.5;
+  top: 0;
+  left: -50%;
+  -webkit-transform: skew(-20deg);
+  transform: skew(-20deg);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.navmenu li:nth-of-type(1) a {
+  color: white;
+  background: #34314c;
+}
+
+.navmenu li a:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navmenu li a:hover:after {
+  left: 150%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.navmenu li a:active {
+  box-shadow: 0 -30px 10px rgba(255, 255, 255, 0.2) inset;
+  border-bottom-width: 0;
+  box-shadow: none;
+  border-top: 8px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: none;
+  transition: none;
+}
+
+@media screen and (max-width: 760px) {
+  .navmenu li a {
+    font-size: 1.5em;
+  }
+}

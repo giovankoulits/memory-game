@@ -1,0 +1,33 @@
+.poster-container {
+  width: 100px;
+  height: 115px;
+  border-radius: 15px;
+  cursor: pointer;
+  perspective: 600;
+  position: relative;
+  margin: 15px;
+}
+.poster {
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.flipped {
+  transform: rotateY(180deg);
+}
+.poster .pic {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.poster .back {
+  background: #eaeaed;
+  color: #0087cc;
+  line-height: 150px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
